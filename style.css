@@ -1,64 +1,210 @@
-#bTn {
-    margin: auto;
-    display: none;
-    border-radius: 0.5em;
-    width: 20%;
-    height: 40px;
-    background-color: black;
-    color: white;
-    font-size: 20px;
-}
-  .images {
-    width: 100%;
-    height: 200px;
-    background-image: url(waiter.jpg);
-    background-size: cover;
-    background-position-y: 200%;
-    background-attachment: fixed;
-    -webkit-box-shadow: inset 0px 0px 30px 2px rgba(0,0,0,0.66); 
-box-shadow: inset 0px 0px 30px 2px rgba(0,0,0,0.66);
-    padding: 0.5em;
-    margin: .5em;
-}
-  body{
-    font-family: 'Lobster', cursive;
-    color: white;
-    background-image: url(swirl.png);
-    background-blend-mode: exclusion;
-    transition: 2s;
+/* CSS files add styling rules to your content */
+div{
+    transition: background-color 1s;
   }
 
-  .card.card-body.text-center.mt-5 {
-    -webkit-box-shadow: 0px 7px 23px -3px #000000; 
-    box-shadow: 0px 7px 23px -3px #000000;
-    background: linear-gradient(270deg, #0516a5, #2ccca3);
-    background-size: 400% 400%;
 
-    -webkit-animation: looper 30s ease infinite;
-    -moz-animation: looper 30s ease infinite;
-    animation: looper 30s ease infinite;
+  body {
+    font-family: "Nunito", sans-serif;
+    margin: 2em;
+    line-height: 2em;
+    background-attachment: fixed;
+    background-position: center;
+    background: rgb(0,84,160);
+    background-blend-mode: multiply;
+    background: linear-gradient(267deg, rgba(0,84,160,1) 0%, rgba(204,229,255,1) 50%, rgba(0,64,133,1) 100%),
+      url("images/grey.png");
+  }
+
+  .logo{
+      margin: auto;
+      padding: 1em;
+      text-align: center;
+      display: block;
+      width: 300px;
+      height: auto;
+      filter: drop-shadow(1px 8px 20px #00000083);
+  }
+
+  .bbox {
+    background-color: white;
+    box-shadow: 0px 4px 15px -1px #000000;
+    border-radius: 0.5em 0;
+  }
+  h1 {
+    font-size: 4em;
+    font-family: "Nunito", cursive;
+    color: #e09d17;
+    text-align: center;
+    line-height: 1em;
+    text-shadow: 1px 1px 10px #000000;
+  }
+  h2{
+  text-align: center;
+  }
+  h3 , #date{
+      text-align: center;
+      color: white;
+      font-size: 2em;
+      text-shadow: 2px 3px 6px black;
+      font-family: "Nunito", sans-serif;
+
+  }
+  button {
+    padding: 0.5em;
+    border-radius: 0.5em;
+    color: white;
+    background-color: #e09d17;
+    margin: 0.15em 0 0.15em 0;
+    transition: background-color 1s;
+  }
+  button:hover {
+    background-color: #004085;
+  }
+  .bbox > div {
+    text-align: center;
+    align-content: center;
+    margin: auto;
+    background-attachment: fixed;
+    background-position: center;
+    display: block;
+    padding: 7em;
+    border-radius: 0.5em 0;
+  }
+  #intro {
+    transition: 1s;
+    color: white;
+    margin-top: 1em;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: linear-gradient(180deg, black, transparent),
+      url("images/working.jpg");
+  }
+  
+  #workplace {
+    transition: 1s;
+    color: white;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: linear-gradient(90deg, black, transparent),
+      url("images/workplace.jpg");
+  }
+  
+  /* clock section CSS*/
+
+  
+  .tictocGal {
+    display: flex;
+    padding: 1em;
+    border-radius: 0.5em 0;
+    background-color: white;
+    box-shadow: 0px 4px 15px -1px #000000;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    transition: 1s;
+  }
+  
+  
+  nav {
+    margin: auto;
+    text-align: center;
+    background-color: #004085;
+    border-radius: 2em;
+    box-shadow: 0px 4px 15px -1px #000000;
+    transition: background-color 1s;
+  }
+  
+  nav > ul {
+    list-style: none;
+    display: flex;
+    margin: 1em;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 1s;
+  }
+  nav > ul > li {
+    padding: 1em;
+    font-size: 1em;
+  }
+  nav > ul :hover {
+    background-color: #e09d17;
+    transition: background-color 0.5s;
+  }
+  
+  nav > ul > li > a {
+    text-decoration: none;
+    color: white !important;
+  }
+  footer{
+    color: white;
+  }
+
+  /* Gallery*/
+  
+  .gallery {
+    box-shadow: 0px 4px 15px -1px #000000;
+    border-radius: 0 0.5em;
+    background-image: url("https://www.yearup.org/sites/default/files/styles/1600xauto/public/2018-12/1-1-hero-image%402x.jpg?itok=fFX8Xhvy");
+    width: 100%;
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+    animation-name: gallery;
+    background-attachment: auto;
+    background-position: center;
+    animation-name: gallery;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes gallery {
+    0% {
+      background-image: url("https://www.yearup.org/sites/default/files/styles/1600xauto/public/2018-12/5-1-hero%403x.jpg?itok=4Y2kuToJ");
+    }
+    50% {
+      background-image: url("https://www.yearup.org/sites/default/files/styles/1600xauto/public/2018-12/5-0-hero%402x.jpg?itok=Lanz54Gn");
+    }
+  
+    100% {
+      background-image: url("https://www.yearup.org/sites/default/files/styles/1600xauto/public/2018-12/1-3-hero-image%403x.jpg?itok=rK63HkCF");
+    }
+  }
+  /*Clock style*/  
+  #clock {
+    position: relative;
+    top: .5em;
+    font-size: 30px;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    border: 2px solid #004085;
+    border-radius: 20px;
+    background-color: #e09d17;
+    color: white;
+    text-shadow: 2px 3px 6px black;
+    font-family: "Nunito", sans-serif;
 }
 
-@-webkit-keyframes looper {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-moz-keyframes looper {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes looper {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-
-@media (min-width: 768px){
-.col-md-6 {
-    -ms-flex: 0 0 50%;
-    flex: 0 0 80%;
-    max-width: 100%;
-}
-}
+  @media screen and (max-width: 700px) {
+    .vafmenu {
+      flex-direction: column-reverse;
+      padding: 1em;
+  
+    }
+    nav > ul {
+      flex-direction: column;
+    }
+  
+    .bbox > div {
+      padding: 2em;
+    }
+  
+  }
+  
