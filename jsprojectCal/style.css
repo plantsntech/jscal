@@ -10,8 +10,8 @@ body {
     -webkit-user-select: none;
     -ms-user-select: none;
     background-attachment: fixed;
-    animation: bg-scroll 10s infinite;
-    animation-timing-function: linear;
+    animation: bg-scroll 5s ease infinite alternate;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes bg-scroll {
