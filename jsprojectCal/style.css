@@ -1,4 +1,6 @@
 body {
+    background-image:url(bg.png),  linear-gradient(17deg, rgba(249,255,234,1) 0%, rgb(77 162 255) 50%, rgba(250,255,218,1) 100%);
+    background-size: contain;
     width: 500px;
     margin: 4% auto;
     font-family: 'Source Sans Pro', sans-serif;
@@ -7,16 +9,36 @@ body {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-  }
+    background-attachment: fixed;
+    animation: bg-scroll 10s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes bg-scroll {
+    100%{
+        background-position: 100%;
+        background-image:url(bg.png), linear-gradient(60deg, rgba(249,255,234,1) 0%, rgb(77 162 255) 50%, rgba(250,255,218,1) 100%);
+    }
+    0%{
+        background-position: 0%;
+        background-image:url(bg.png), linear-gradient(0deg, rgba(249,255,234,1) 0%, rgb(77 162 255) 50%, rgba(250,255,218,1) 100%);
+
+    }
+    
+}
+
   
   .calculator {
+    background-color: rgba(255, 255, 255, 0.55);
     padding: 20px;
     -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
     border-radius: 1px;
+    box-shadow: -2px 4px 25px 2px #2E2E2E;
   }
   
   .input {
+    background-color: white;
     border: 1px solid #ddd;
     border-radius: 1px;
     height: 60px;
@@ -37,7 +59,10 @@ body {
   
   .buttons {}
   
-  .operators {}
+  .operators {
+    display: flex;
+    justify-content: space-evenly;
+}
   
   .operators div {
     display: inline-block;
@@ -63,9 +88,6 @@ body {
     font-weight: bold;
   }
   
-  .leftPanel {
-    display: inline-block;
-  }
   
   .numbers div {
     display: inline-block;
@@ -93,24 +115,24 @@ body {
   
   div.equal {
     display: inline-block;
-    border: 1px solid #3079ED;
+    border: 2px solid #dee9f2;
     border-radius: 1px;
-    width: 17%;
+    width: 80px;
     text-align: center;
-    padding: 127px 10px;
-    margin: 10px 6px 10px 0;
+    padding: 40px 10px;
+    margin: auto;
     vertical-align: top;
     cursor: pointer;
     color: #FFF;
-    background-color: #4d90fe;
+    background-color: #236a99;
     transition: all .2s ease-in-out;
-  }
+}
   
   div.equal:hover {
-    background-color: #307CF9;
+    background-color: #3089c4;
     -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-    border-color: #1857BB;
+    border-color: #236a99;
   }
   
   div.equal:active {
