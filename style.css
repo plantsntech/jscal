@@ -10,7 +10,7 @@ body {
     -webkit-user-select: none;
     -ms-user-select: none;
     background-attachment: fixed;
-    animation: bg-scroll 5s ease infinite alternate;
+    animation: bg-scroll 25s ease infinite alternate;
     animation-timing-function: ease-in-out;
 }
 
